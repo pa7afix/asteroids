@@ -14,6 +14,7 @@ def main():
     screen = pygame.display.set_mode((c.SCREEN_WIDTH, c.SCREEN_HEIGHT))
     clock = pygame.time.Clock()
     dt = 0
+    #organizing objects into groups for better handling inside the game loop
     updatable =  pygame.sprite.Group()
     drawable = pygame.sprite.Group()
     player.Player.containers = (updatable, drawable)
@@ -27,7 +28,7 @@ def main():
     field_of_asteroids = AsteroidField()
 # The game loop
     while True:
-        for event in pygame.event.get():
+        for event in pygame.event.get(): #the game can be quit by closing the window, or terminal interrupt
             if event.type == pygame.QUIT:
                 return
         for thing in updatable:
@@ -45,7 +46,7 @@ def main():
         for thing in drawable:
             thing.draw(screen)
         pygame.display.flip()
-        clock.tick(60)
+        clock.tick(60) #limit the game to 60 fps
         dt = clock.tick(60)/1000
 
 

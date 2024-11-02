@@ -1,3 +1,4 @@
+#Magic numbers for the game, adjust at your own discretion
 SCREEN_WIDTH = 1280
 SCREEN_HEIGHT = 720
 

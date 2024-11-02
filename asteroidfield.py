@@ -3,7 +3,7 @@ import random
 from asteroid import Asteroid
 from constants import *
 
-
+#logic for spawning in asteroids
 class AsteroidField(pygame.sprite.Sprite):
     edges = [
         [

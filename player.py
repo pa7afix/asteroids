@@ -11,6 +11,7 @@ class Player(CircleShape):
         self.rotation = 0
         self.timer = 0
 
+# While the player is logically a circle due to easier math, they are represented as a triangle on screen, for improved clarity
     def triangle(self):
         forward = pygame.Vector2(0, 1).rotate(self.rotation)
         right = pygame.Vector2(0, 1).rotate(self.rotation + 90) * self.radius / 1.5

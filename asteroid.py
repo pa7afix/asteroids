@@ -14,6 +14,8 @@ class Asteroid(CircleShape):
     def update(self, dt):
         self.position +=  self.velocity * dt
 
+#if the asteroid is hit by a shot it will be removed.
+#in case it is not the minimum size it will plit into 2 new asteroids of the lower size category
     def split(self):
         self.kill()
         if self.radius <= constants.ASTEROID_MIN_RADIUS:
